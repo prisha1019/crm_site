@@ -68,9 +68,59 @@
   </header>
 
   <main>
+    <!--rep name-->
     <h1 style="text-align:center; color:#cbb6ff">New Project Entry</h1>
     <form class="form-grid">
-      <!-- Existing fields already included -->
+      <div class="form-group"><label>Rep Name *</label><select><option>- Select a value -</option></select></div>
+      <div class="form-group"><label>Account Name</label><input type="text"></div>
+      <div class="form-group"><label>DBA</label><input type="text"></div>
+      <div class="form-group"><label>Address 1</label><input type="text"></div>
+      <div class="form-group"><label>Address 2</label><input type="text"></div>
+      <div class="form-group"><label>City</label><input type="text"></div>
+      <div class="form-group"><label>State</label><input type="text"></div>
+      <div class="form-group"><label>Zip Code</label><input type="text"></div>
+      <div class="form-group"><label>Phone Number</label><input type="tel" placeholder="123-456-7890" pattern="\d{3}-\d{3}-\d{4}" required></div>
+      <div class="form-group"><label>Fax Number</label><input type="text"></div>
+      <div class="form-group"><label>Industry</label><input type="text"></div>
+      <div class="form-group"><label>Type of Line</label><select><option>- None -</option></select></div>
+      <div class="form-group"><label>Type of Caller</label><input type="text"></div>
+      <div class="form-group"><label>Service Provider</label><select><option>- None -</option></select></div>
+      <div class="form-group"><label>Service Provider (2)</label><input type="text"></div>
+      <div class="form-group"><label>Phone Brand</label><select><option>- None -</option></select></div>
+
+
+          <!--contact-->
+      <div class="form-group"><label>Contact Person</label><input type="text"></div>
+      <div class="form-group"><label>Contact Title</label><input type="text"></div>
+      <div class="form-group"><label>AAU</label><input type="text"></div>
+      <div class="form-group"><label>Password</label><input type="password"></div>
+      <div class="form-group"><label>Email</label><input type="email"></div>
+
+  <header class="navbar">
+    <nav>
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+      <label for="menu-toggle" class="menu-icon">&#9776;</label>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="administrator.html">Administrator</a></li>
+        <li><a href="content.html">Content</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="leads.html">Leads</a></li>
+        <li><a href="new.html">New</a></li>
+        <li><a href="calendar.html">Calendar</a></li>
+        <li><a href="dialer.html">Dialer</a></li>
+        <li><a href="add_project.html">Add Project</a></li>
+        <li><a href="project_calendar.html">Project Calendar</a></li>
+        <li><a href="clients.html">Clients</a></li>
+        <li><a href="lookup.html">Lookup</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1 style="text-align:center; color:#cbb6ff">New Project Entry</h1>
+    <form class="form-grid">
+      <!-- System Info class -->
       
       <div class="form-section-title">System Info</div>
       <div class="form-group"><label>N.O.E</label><input type="text"></div>
@@ -78,18 +128,20 @@
       <div class="form-group"><label>Number of Lines</label><input type="text"></div>
       <div class="form-group"><label>Number of Analog Lines</label><input type="text"></div>
       <div class="form-group"><label>Age of System</label><input type="text"></div>
-
+    <!--billing-->
       <div class="form-section-title">Billing</div>
       <div class="form-group"><label>Monthly Bill Amount</label><input type="text"></div>
       <div class="form-group"><label>Internet Bill Amount</label><input type="text"></div>
       <div class="form-group"><label>Maintenance Bill Amount</label><input type="text"></div>
       <div class="form-group"><label>Open Leases Bill Amount</label><input type="text"></div>
 
+    <!--task, comments-->
       <div class="form-section-title">Task</div>
       <div class="form-group"><label>Comments</label><textarea></textarea></div>
       <div class="form-group"><label>Date</label><input type="date"></div>
       <div class="form-group"><label>Reminder Text</label><input type="text"></div>
 
+    <!--set-->
       <div class="form-section-title">Set</div>
       <div class="form-group"><label>Set Options</label><textarea placeholder="Checkboxes go here"></textarea></div>
 
@@ -112,16 +164,18 @@
       <div class="form-group"><label>Sales Agent</label><select><option>- None -</option></select></div>
       <div class="form-group"><label>Supervisor Agent</label><select><option>- None -</option></select></div>
 
+    <!--pre-sale documents-->
       <div class="form-section-title">Pre-Sale Documents</div>
       <div class="form-group"><label>Upload</label><input type="file"></div>
       <div class="form-group"><label>Manager Set</label><textarea placeholder="Checkboxes go here"></textarea></div>
       <div class="form-group"><label>Sales Support Notes</label><textarea></textarea></div>
 
+          <!--Folder Docs-->
       <div class="form-section-title">Folder Documents</div>
       <div class="form-group"><label>Upload</label><input type="file"></div>
       <div class="form-group"><label>Service Provider Notes</label><textarea></textarea></div>
       <div class="form-group"><label>Operations Notes</label><textarea></textarea></div>
-
+    <!--Add on Documents-->
       <div class="form-section-title">Add-On Docs</div>
       <div class="form-group"><label>Upload</label><input type="file"></div>
       <div class="form-group"><label>Service Provider Add-On Notes</label><textarea></textarea></div>
