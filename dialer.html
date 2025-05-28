@@ -5,6 +5,146 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dialer</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #1e1e2f;
+      color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+
+    header.navbar {
+      background-color: #2b2b40;
+      padding: 0.5rem 1rem;
+    }
+
+    .navbar nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: #cbb6ff;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+
+    main {
+      padding: 1rem 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      color: #cbb6ff;
+      margin-bottom: 1.5rem;
+    }
+
+    .dialer-form {
+      background-color: #2b2b40;
+      padding: 1rem;
+      border-radius: 10px;
+      max-width: 600px;
+      margin: 0 auto 2rem auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group label {
+      margin-bottom: 0.3rem;
+      font-weight: bold;
+      color: #e0e0ff;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      padding: 0.5rem;
+      background-color: #3c3c57;
+      border: 1px solid #555;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 0.9rem;
+    }
+
+    .form-group textarea {
+      height: 100px;
+    }
+
+    .dialer-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 1rem;
+    }
+
+    .dialer-actions button {
+      background-color: #5936a8;
+      color: #fff;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    .dialpad {
+      background-color: #2b2b40;
+      padding: 1rem;
+      border-radius: 10px;
+      max-width: 300px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .dialpad-display {
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      font-size: 1.2rem;
+      background-color: #3c3c57;
+      border: 1px solid #555;
+      color: #fff;
+      border-radius: 5px;
+      text-align: right;
+    }
+
+    .dialpad-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.5rem;
+    }
+
+    .dialpad-button {
+      padding: 1rem;
+      font-size: 1.2rem;
+      background-color: #4b4b6b;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .dialpad-button:hover {
+      background-color: #6a4fbf;
+    }
+  </style>
 </head>
 <body>
   <header class="navbar">
@@ -19,15 +159,54 @@
         <li><a href="dialer.html">Dialer</a></li>
         <li><a href="add_project.html">Add Project</a></li>
         <li><a href="calendar.html">Calendar</a></li>
-        <li><a href="calendar.html">Calendar</a></li>
         <li><a href="lookup.html">Lookup</a></li>
         <li><a href="clients.html">Clients</a></li>
-
       </ul>
     </nav>
   </header>
+
   <main>
     <h1>Dialer</h1>
+
+  
+
+    <div class="dialpad">
+      <div id="dialDisplay" class="dialpad-display"> </div>
+      <div class="dialpad-grid">
+        <button class="dialpad-button" onclick="appendDigit('1')">1</button>
+        <button class="dialpad-button" onclick="appendDigit('2')">2</button>
+        <button class="dialpad-button" onclick="appendDigit('3')">3</button>
+        <button class="dialpad-button" onclick="appendDigit('4')">4</button>
+        <button class="dialpad-button" onclick="appendDigit('5')">5</button>
+        <button class="dialpad-button" onclick="appendDigit('6')">6</button>
+        <button class="dialpad-button" onclick="appendDigit('7')">7</button>
+        <button class="dialpad-button" onclick="appendDigit('8')">8</button>
+        <button class="dialpad-button" onclick="appendDigit('9')">9</button>
+        <button class="dialpad-button" onclick="appendDigit('*')">*</button>
+        <button class="dialpad-button" onclick="appendDigit('0')">0</button>
+        <button class="dialpad-button" onclick="appendDigit('#')">#</button>
+      </div>
+    </div>
   </main>
+
+  <script>
+    function startDialer() {
+      const mode = document.getElementById('dialerMode').value;
+      const speed = document.getElementById('callSpeed').value;
+      const pause = document.getElementById('pauseTime').value;
+      const status = document.getElementById('agentStatus').value;
+
+      alert(`Starting ${mode} dialer:\nSpeed: ${speed}\nPause: ${pause}s\nStatus: ${status}`);
+    }
+
+    function stopDialer() {
+      alert("Dialer stopped.");
+    }
+
+    function appendDigit(digit) {
+      const display = document.getElementById('dialDisplay');
+      display.textContent += digit;
+    }
+  </script>
 </body>
 </html>
