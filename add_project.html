@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Add Project</title>
+  <link rel="stylesheet" href="styles.css">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -13,27 +14,6 @@
       padding: 0;
     }
 
-    .navbar {
-      background-color: #2b2b40;
-      padding: 0.75rem 1rem;
-    }
-
-    .navbar nav ul {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-      padding: 0;
-      margin: 0;
-    }
-
-    .navbar nav ul li a {
-      color: #cbb6ff;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 0.9rem;
-    }
 
     h1 {
       text-align: center;
@@ -104,19 +84,45 @@
 </head>
 <body>
   <header class="navbar">
-    <nav>
-      <ul>
-        <li><a href="administrator.html">Administrator</a></li>
-        <li><a href="dashboard.html">Dashboard</a></li>
-        <li><a href="new.html">Add Leads</a></li>
-        <li><a href="leads.html">Leads</a></li>
-        <li><a href="dialer.html">Dialer</a></li>
-        <li><a href="add_project.html">Add Project</a></li>
-        <li><a href="calendar.html">Calendar</a></li>
-        <li><a href="lookup.html">Lookup</a></li>
-        <li><a href="clients.html">Clients</a></li>
+<nav class="main-nav">
+  <ul>
+    <li class="dropdown">
+      <a href="#">Add content</a>
+      <ul class="submenu">
+        <li><a href="add_content/basic_page.html">Basic Page</a></li>
+        <li><a href="add_content/blog.html">Blog</a></li>
+        <li><a href="add_content/instagram.html">Instagram</a></li>
+        <li><a href="add_content/lookup.html">Lookup</a></li>
+        <li><a href="add_content/webform.html">Webform</a></li>
+        <li><a href="add_content/webform_report.html">Webform Report</a></li>
       </ul>
-    </nav>
+    </li>
+    <li class="dropdown">
+      <a href="administrator.html">Administrator</a>
+      <ul class="submenu">
+        <li><a href="#">Structure</a></li>
+        <li><a href="#">Modules</a></li>
+        <li><a href="#">Appearance</a></li>
+        <li><a href="#">People</a></li>
+        <li><a href="#">Configuration</a></li>
+        <li><a href="#">Reports</a></li>
+        <li><a href="#">All Calendars</a></li>
+      </ul>
+    </li>
+    <li><a href="dashboard.html">Dashboard</a></li>
+    <li><a href="new.html">Add Leads</a></li>
+    <li><a href="leads.html">View Leads</a></li>
+    <li class="dropdown">
+      <a href="add_project.html">Add Project</a>
+      <ul class="submenu">
+        <li><a href="project_calendar.html">Project Calendar</a></li>
+        <li><a href="todays_project.html">Today's Project</a></li>
+      </ul>
+    </li>
+    <li><a href="clients.html">Clients</a></li>
+  </ul>
+</nav>
+
   </header>
 
   <main>
